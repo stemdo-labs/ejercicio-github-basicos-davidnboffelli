@@ -16,4 +16,4 @@ jobs:
       - run: |
           gh issue create -a @me --title "Issue test" --body "Issue generada en un job"
         env:
-          GH_TOKEN: ${{ github.token }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
