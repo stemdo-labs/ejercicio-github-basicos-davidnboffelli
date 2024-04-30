@@ -10,3 +10,5 @@ jobs:
     steps:
       - run: |
           gh issue create -a @me
+        env:
+          GH_TOKEN: ${{ github.token }}
