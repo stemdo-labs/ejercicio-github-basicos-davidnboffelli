@@ -7,7 +7,8 @@ on:
 
 jobs:
   buildeo:
-    permissions: write-all
+    permissions:
+      issues: write
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -15,6 +16,6 @@ jobs:
           sparse-checkout: .
 
       - run: |
-          gh issue create --assignee "@me" --title "Issue test" --body "Issue generada en un job"
+          gh issue create --assignee davidnboffelli --title "Issue test" --body "Issue generada en un job"
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
