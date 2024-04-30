@@ -1,0 +1,12 @@
+name: Ejecutar un script al hacer push, mostrando información del runner y la rama.
+on:
+  pull_request:
+    types: 
+      - opened
+
+jobs:
+  buildeo:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          gh issue create -a @me
