@@ -1,13 +1,18 @@
-name: Ejecutar un script al hacer push, mostrando información del runner y la rama.
+name: Generar una issue al abrir un pull request. Y más
 on:
   pull_request:
     types: 
       - opened
+      - reopened
 
 jobs:
   buildeo:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: .
+
       - run: |
           gh issue create -a @me --title "Issue test" --body "Issue generada en un job"
         env:
