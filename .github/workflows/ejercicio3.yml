@@ -22,6 +22,6 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - run: |
-          "gh pr edit ${{ github.event.number }} --body 'Fixes #${{ steps.create_issue.outputs.issue_id }}'"
+          gh pr edit ${{ github.event.number }} --body "Fixes #${{ steps.create_issue.outputs.issue_id }}"
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
