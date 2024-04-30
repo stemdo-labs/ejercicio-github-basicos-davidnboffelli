@@ -14,6 +14,6 @@ jobs:
           sparse-checkout: .
 
       - run: |
-          gh issue create -a @me --title "Issue test" --body "Issue generada en un job"
+          gh issue create --title "Issue test" --body "Issue generada en un job"
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
