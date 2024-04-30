@@ -1,4 +1,4 @@
-name: Ejecutar un script al hacer push, mostrando información del runner y la rama.
+name: Crear un wokflow que simule los siguientes estados de CI/CD buid , test y push
 on:
   push
 
