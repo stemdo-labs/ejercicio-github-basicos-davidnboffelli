@@ -14,3 +14,9 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy to your project.
+          
+  call-reusable-workflow:
+    uses: ./.github/workflows/ejercicio6-reutilizable.yml
+    with:
+      image-to-build: ghcr.io/stemdo-labs/publish-packages-davidnboffelli/game
+      reg.io: ghcr.io
