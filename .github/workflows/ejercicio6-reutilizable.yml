@@ -1,13 +1,16 @@
-name: Publish to Docker
+name: Reusable Workflow
+
 on:
   workflow_call:
 
-permissions:
-  packages: write
-  contents: read
+
 jobs:
-  publish:
+  build:
     runs-on: ubuntu-latest
+
     steps:
-      - run: |
-          echo "pepe"
+      - uses: actions/checkout@v4
+
+      - name: Output the input value
+        run: |
+          echo "The node version to use is: pepe"
