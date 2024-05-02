@@ -20,6 +20,7 @@ jobs:
     uses: ./.github/workflows/ejercicio6-reutilizable.yml
     with:
       image-to-build: nginx
+      tag-app: dboffelli/ngnixtest:latest
     secrets:
       dhuser: ${{ secrets.DH_USER }}
       dhpass: ${{ secrets.DH_PASS }}
