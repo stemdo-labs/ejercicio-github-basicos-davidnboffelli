@@ -3,7 +3,9 @@
 on: [workflow_dispatch]
 
 name: Run Azure Login without subscription
-
+permissions:
+  id-token: write
+  contents: read
 jobs:
 
   build-and-deploy:
