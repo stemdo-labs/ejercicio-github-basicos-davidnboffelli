@@ -11,6 +11,7 @@ jobs:
     steps:
       - run: |
           az login \
+          --allow-no-subscriptions \
           --service-principal \
           --username ${{ secrets.AZURE_CLIENT_ID }} \
           --password "${{ secrets.SERVICE_PRINCIPAL_SECRET }}" \
