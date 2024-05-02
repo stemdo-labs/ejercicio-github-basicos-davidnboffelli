@@ -28,5 +28,5 @@ jobs:
         id: meta
         uses: docker/metadata-action@v5
         with:
-          images: ${{ image-to-build }}
+          images: ${{ inputs.image-to-build }}
           tags: type=sha
