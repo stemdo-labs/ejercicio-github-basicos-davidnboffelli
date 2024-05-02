@@ -32,4 +32,4 @@ jobs:
           if [ "${{ github.event.inputs.operacion }}" = "dividir" ]; then
             resultado=${{ github.event.inputs.valor1 }}/${{ github.event.inputs.valor2 }}
           fi
-          echo "$resultado"
+          echo "$resultado";
