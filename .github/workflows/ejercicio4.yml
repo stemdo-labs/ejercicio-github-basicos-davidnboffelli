@@ -25,3 +25,4 @@ jobs:
       - run: |
           if [ "${{ github.event.inputs.operacion }}" = "sumar" ]; then
           echo "pepe"
+          fi
