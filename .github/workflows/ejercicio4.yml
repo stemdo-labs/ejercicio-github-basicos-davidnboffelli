@@ -23,13 +23,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: |
-          if [ "${{ github.event.inputs.operacion }}" == "sumar" ]; then
+          if [ "${{ github.event.inputs.operacion }}" = "sumar" ]; then
             resultado=${{ github.event.inputs.valor1 }}+${{ github.event.inputs.valor2 }}
-          elif [ "${{ github.event.inputs.operacion }}" == "restar" ]; then
+          elif [ "${{ github.event.inputs.operacion }}" = "restar" ]; then
             resultado=${{ github.event.inputs.valor1 }}-${{ github.event.inputs.valor2 }}
-          if [ "${{ github.event.inputs.operacion }}" == "multiplicar" ]; then
+          if [ "${{ github.event.inputs.operacion }}" = "multiplicar" ]; then
             resultado=${{ github.event.inputs.valor1 }}*${{ github.event.inputs.valor2 }}
-          if [ "${{ github.event.inputs.operacion }}" == "dividir" ]; then
+          if [ "${{ github.event.inputs.operacion }}" = "dividir" ]; then
             resultado=${{ github.event.inputs.valor1 }}/${{ github.event.inputs.valor2 }}
           fi
           echo "$resultado"
