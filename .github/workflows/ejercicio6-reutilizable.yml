@@ -6,7 +6,9 @@ on:
       image-to-build:
         required: true
         type: string
-
+      regio:
+        required: true
+        type: string
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -17,3 +19,4 @@ jobs:
       - name: Output the input value
         run: |
           echo "The node version to use is: ${{ inputs.image-to-build }}"
+          echo "and ${{ inputs.regio }}"
