@@ -24,12 +24,13 @@ jobs:
     steps:
       - run: |
           if [ "${{ github.event.inputs.operacion }}" = "sumar" ]; then
-          resultado=$(("${{ github.event.inputs.valor1 }}" + "${{ github.event.inputs.valor2 }}"))
+            resultado=$(echo "$((${{ github.event.inputs.valor1 }}+${{ github.event.inputs.valor2))")
           elif [ "${{ github.event.inputs.operacion }}" = "restar" ]; then
-          resultado=$(("${{ github.event.inputs.valor1 }}" - "${{ github.event.inputs.valor2 }}"))
-          elif [ "${{ github.event.inputs.operacion }}" = "multiplicar" ]; then
-          resultado=$(("${{ github.event.inputs.valor1 }}" * "${{ github.event.inputs.valor2 }}"))
-          elif [ "${{ github.event.inputs.operacion }}" = "dividir" ]; then
-          resultado=$(("${{ github.event.inputs.valor1 }}" / "${{ github.event.inputs.valor2 }}"))          
+            resultado=$(echo "$((${{ github.event.inputs.valor1 }}-${{ github.event.inputs.valor2))")
+          if [ "${{ github.event.inputs.operacion }}" = "multiplicar" ]; then
+            resultado=$(echo "$((${{ github.event.inputs.valor1 }}*${{ github.event.inputs.valor2))")
+          if [ "${{ github.event.inputs.operacion }}" = "dividir" ]; then
+            resultado=$(echo "$((${{ github.event.inputs.valor1 }}/${{ github.event.inputs.valor2))")
           fi
-          echo $resultado
+          echo "$resultado"
+          
