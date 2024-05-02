@@ -1,6 +1,6 @@
 name: Publish to Docker
 on:
-  workflow_dispatch:
+  workflow_call:
     inputs:
       image-to-build:
         required: true
