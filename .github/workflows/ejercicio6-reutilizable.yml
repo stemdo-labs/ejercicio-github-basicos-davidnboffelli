@@ -10,14 +10,14 @@ on:
         required: true
         type: string
 permissions:
-  packages: write  
-  contents: read
+  write-all 
+  read-all
 jobs:
   build:
     runs-on: ubuntu-latest
     permissions:
-      packages: write
-      contents: read
+      write-all 
+      read-all
 
     steps:
       - uses: actions/checkout@v4
