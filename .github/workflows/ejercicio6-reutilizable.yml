@@ -9,9 +9,7 @@ on:
       regio:
         required: true
         type: string
-permissions:
-  packages: write
-  contents: read
+
 jobs:
   build:
     runs-on: ubuntu-latest
