@@ -33,4 +33,3 @@ jobs:
             resultado=$(echo "$((${{ github.event.inputs.valor1 }}/${{ github.event.inputs.valor2))")
           fi
           echo "$resultado"
-          
