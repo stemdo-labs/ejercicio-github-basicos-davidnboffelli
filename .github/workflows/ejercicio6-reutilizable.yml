@@ -6,6 +6,9 @@ on:
       image-to-build:
         required: true
         type: string
+      tag-app:
+        required: true
+        type: string
     secrets:
       dhuser:
         required: true
@@ -43,4 +46,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: dboffelli/ngnixtest:latest
+          tags: ${{ inputs.tag-app }}
