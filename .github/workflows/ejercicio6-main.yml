@@ -2,9 +2,7 @@ name: My Starter Workflow
 
 on:
   workflow_dispatch:
-permissions:
-  packages: write  
-  contents: read
+permissions: write-all 
 jobs:
   build:
     runs-on: ubuntu-latest
