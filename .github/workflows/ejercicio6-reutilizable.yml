@@ -2,7 +2,10 @@ name: Reusable Workflow
 
 on:
   workflow_call:
-
+    inputs:
+      image-to-build:
+        required: true
+        type: string
 
 jobs:
   build:
@@ -13,4 +16,4 @@ jobs:
 
       - name: Output the input value
         run: |
-          echo "The node version to use is: pepe"
+          echo "The node version to use is: ${{ image-to-build }}"
