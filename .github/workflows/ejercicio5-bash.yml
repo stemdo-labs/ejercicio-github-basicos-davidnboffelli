@@ -1,0 +1,9 @@
+name: Conseguir hacer login en azure con vuestras cuentas (con bash y con actions del marketplace)
+on:
+  workflow_dispatch:
+
+jobs:
+  login-azure:
+    runs-on: ubuntu-latest
+    steps:
+      - 
