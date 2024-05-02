@@ -9,15 +9,11 @@ on:
       regio:
         required: true
         type: string
-permissions:
-  write-all 
-  read-all
+permissions: write-all 
 jobs:
   build:
     runs-on: ubuntu-latest
-    permissions:
-      write-all 
-      read-all
+    permissions: write-all 
 
     steps:
       - uses: actions/checkout@v4
